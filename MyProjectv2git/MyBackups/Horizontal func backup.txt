@@ -1,0 +1,170 @@
+int i = 0, j = 1,count = 0, gate = 0,m;
+    char c;
+
+    if(symbol == 'X')
+    {
+        m = Pos[1];
+        for(i=0;i<size;i++)//Right
+        {
+            m++;
+            if(m == size)
+            {
+                break;
+            }
+            c = Board[Pos[0]][Pos[1] + j];
+            j++;
+            if(c == '-')
+            {
+                gate = 0;
+                count = 0;
+                break;
+            }
+            if(c == 'O')
+            {
+                count++;
+                continue;
+            }
+            if(c == 'X')
+            {
+                gate = 1;
+                break;
+            }
+        }
+        if(count > 0 && gate == 1)
+        {
+            if(flip == 1)
+            {
+                for(i=0;i<count + 1;i++)
+                {
+                    Board[Pos[0]][Pos[1] + i] = 'X';
+                }
+            }
+            *ptr+=count;
+            return true;
+        }
+        j=1;
+        m=Pos[1];
+        for(i=0;i<size;i++)//Left
+        {
+            m--;
+            if(m == -1)
+            {
+                break;
+            }
+            c = Board[Pos[0]][Pos[1] - j];
+            j++;
+            if(c == '-')
+            {
+                gate = 0;
+                count = 0;
+                break;
+            }
+            if(c == 'O')
+            {
+                count++;
+                continue;
+            }
+            if(c == 'X')
+            {
+                gate = 1;
+                break;
+            }
+        }
+        if(count > 0 && gate == 1)
+        {
+            if(flip == 1)
+            {
+                for(i=0;i<count + 1;i++)
+                {
+                    Board[Pos[0]][Pos[1] - i] = 'X';
+                }
+            }
+            *ptr+=count;
+            return true;
+        }
+
+    }
+    if(symbol == 'O')
+    {
+        m = Pos[1];
+        for(i=0;i<size;i++)//Right
+        {
+            m++;
+            if(m == size)
+            {
+                break;
+            }
+            c = Board[Pos[0]][Pos[1] + j];
+            j++;
+            if(c == '-')
+            {
+                gate = 0;
+                count = 0;
+                break;
+            }
+            if(c == 'X')
+            {
+                count++;
+                continue;
+            }
+            if(c == 'O')
+            {
+                gate = 1;
+                break;
+            }
+        }
+        if(count > 0&& gate == 1)
+        {
+            if(flip == 1)
+            {
+                for(i=0;i<count + 1;i++)
+                {
+                    Board[Pos[0]][Pos[1] + i] = 'O';
+                }
+            }
+            *ptr+=count;
+            return true;
+        }
+        j=1;
+        m= Pos[1];
+        for(i=0;i<size;i++)
+        {
+            m--;
+            if(m == -1)
+            {
+                break;
+            }
+            c = Board[Pos[0]][Pos[1] - j];
+            j++;
+            if(c == '-')
+            {
+                gate = 0;
+                count = 0;
+                break;
+            }
+            if(c == 'X')
+            {
+                count++;
+                continue;
+            }
+            if(c == 'O')
+            {
+                gate = 1;
+                break;
+            }
+        }
+        if(count > 0 && gate == 1)
+        {
+            if(flip == 1)
+            {
+                for(i=0;i<count + 1;i++)
+                {
+                    Board[Pos[0]][Pos[1] - i] = 'O';
+                }
+            }
+            *ptr+=count;
+            return true;
+        }
+
+    }
+    return false;

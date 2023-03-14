@@ -1,0 +1,56 @@
+/*int Game::CheckifWin(char **Board,int size,int *S1,int *S2,char *p1,char *p2,char symbol) {
+    int i,j,empty = 0,X = 0, O = 0,score = 0;
+    char c;
+    for(i=0;i<size;i++)
+    {
+        for(j=0;j<size;j++)
+        {
+            c = Board[i][j];
+            if(c == '-')
+            {
+                empty++;
+                continue;
+            }
+            if(c == 'X')
+            {
+                X++;
+                continue;
+            }
+            if(c == 'O')
+            {
+                O++;
+            }
+        }
+    }
+    *S1 = X;
+    *S2 = O;
+    if(empty == 0)
+    {
+        if(X == O)
+        {
+            cout<<"Draw "<<p1<<": "<<*S1<<","<<p2<<": "<<*S2<<endl;
+            return 3;
+        }
+        if(X > O)
+        {
+            cout<<p1<<" wins! "<<p1<<": "<<*S1<<","<<p2<<": "<<*S2<<endl;
+            return X;
+        }
+        if(X < O)
+        {
+            cout<<p2<<" wins! "<<p1<<": "<<*S1<<","<<p2<<": "<<*S2<<endl;
+            return O;
+        }
+    }
+    if(X == 0)
+    {
+        cout<<p2<<" wins! "<<p1<<": "<<*S1<<","<<p2<<": "<<*S2<<endl;
+        return O;
+    }
+    if(O == 0)
+    {
+        cout<<p1<<" wins! "<<p1<<": "<<*S1<<","<<p2<<": "<<*S2<<endl;
+        return X;
+    }
+    return 0;
+}*/

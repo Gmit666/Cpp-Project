@@ -1,0 +1,7 @@
+4
+Gmit 0 Zora 0
+Game 1
+Zora win!
+Gmit 0 Zora 1
+Zora wins the tournament!
+End

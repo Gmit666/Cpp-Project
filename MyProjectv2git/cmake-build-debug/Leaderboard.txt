@@ -1,0 +1,10 @@
+Dave 4 144
+Shuhi 3 186
+Lori 3 32
+Amit 2 124
+Gmit 2 57
+Lora 1 14
+Ron 1 7
+Eric 0 4
+Olive 0 21
+World 0 8

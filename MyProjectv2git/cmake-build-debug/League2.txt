@@ -1,0 +1,8 @@
+4
+Gmit 0 Lori 0 Zora 0 Erron 0
+Game 1
+Lori win!//mode 0
+Gmit 0 Lori 1 Zora 0 Erron 0
+Game 2
+Zora win!
+Gmit 0 Lori 1 Zora 1 Erron 0
